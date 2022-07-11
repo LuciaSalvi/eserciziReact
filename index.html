@@ -10,10 +10,23 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="root"></div>
     <script type="text/babel">
-        var HelloWorld = () => <p><strong>Hello World</strong>!</p>;
-        ReactDOM.render(<HelloWorld />, document.getElementById("app"));
+
+        //var HelloWorld = () => <p><strong>Hello World</strong>!</p>;
+
+        var HelloWorld = () => {
+            var pianeta = "mondo";
+            var domanda = "Come stai?"
+            return (
+                <div>
+                    <p>Ciao {pianeta}</p>
+                    <p>{domanda}</p>
+                </div>
+            )
+        }
+
+        ReactDOM.render(<HelloWorld />, document.getElementById("root"));
     </script>
     
 </body>
